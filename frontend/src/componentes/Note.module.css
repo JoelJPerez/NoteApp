@@ -1,0 +1,9 @@
+.item {
+  background-color: wheat;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
