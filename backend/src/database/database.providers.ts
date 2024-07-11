@@ -12,13 +12,13 @@ export const DatabaseProvider = [
     database: process.env.POSTGRES_DB || 'notes_db',
     synchronize: true,
     entities: [Note, Category],
-    // migrations: [__dirname + '../migrations/*{.ts,.js}'],
-    // ssl: process.env.POSTGRES_SSL === 'true',
-    // extra: {
-    //   ssl:
-    //     process.env.POSTGRES_SSL === 'true'
-    //       ? { rejectUnauthorized: false }
-    //       : null,
-    // },
+    migrations: [__dirname + '../migrations/*{.ts,.js}'],
+    ssl: process.env.POSTGRES_SSL === 'true',
+    extra: {
+       ssl:
+         process.env.POSTGRES_SSL === 'true'
+           ? { rejectUnauthorized: false }
+           : null,
+     },
   }),
 ];
